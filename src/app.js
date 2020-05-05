@@ -2,6 +2,8 @@ const path = require('path')
 const express = require('express')
 
 const app = express()
+const port = process.env.PORT || 3000
+
 app.set('view engine', 'hbs')
 
 app.use(
@@ -31,6 +33,6 @@ app.get('/helpold', (req, res) => {
  }
  )
 
-app.listen(3000, () => {
-    console.log('server started')
+app.listen(port, () => {
+    console.log('server started on port '+port)
 })
